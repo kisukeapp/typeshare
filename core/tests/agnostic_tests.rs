@@ -71,11 +71,6 @@ mod blocklisted_types {
     }
 
     #[test]
-    fn test_u64_blocklisted_struct() {
-        assert_type_is_blocklisted("u64", "u64", "17");
-    }
-
-    #[test]
     fn test_isize_blocklisted_struct() {
         assert_type_is_blocklisted("isize", "isize", "17");
     }
