@@ -378,7 +378,8 @@ impl TryFrom<&syn::Type> for RustType {
                     "u16" => Self::Special(SpecialRustType::U16),
                     "u32" => Self::Special(SpecialRustType::U32),
                     "U53" => Self::Special(SpecialRustType::U53),
-                    "u64" | "i64" | "usize" | "isize" => {
+                    "u64" => Self::Special(SpecialRustType::U64),
+                    "i64" | "usize" | "isize" => {
                         return Err(
                             RustTypeParseError::UnsupportedType(vec![id]).with_span(path.span())
                         );
